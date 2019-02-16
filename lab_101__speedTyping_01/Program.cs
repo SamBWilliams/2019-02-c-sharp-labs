@@ -18,7 +18,7 @@ namespace lab_101__speedTyping_01
 
             if (userInput == 's' || userInput == 'S')
             {
-                Console.WriteLine("Enter how many seconds you wish to play for");
+                Console.WriteLine("\nEnter how many seconds you wish to play for");
                 int timeInput = Convert.ToInt32(Console.ReadLine());
                 game(timeInput);
             }
@@ -39,7 +39,7 @@ namespace lab_101__speedTyping_01
                 inputList.Add(input);
             }
             Console.WriteLine("\n\n Times up\n\n");
-            Console.WriteLine($"You entered {inputList.Count().ToString()} in the elapsed time!");
+            Console.WriteLine($"You entered {inputList.Count().ToString()} characters in {time} seconds!");
         }
     }
 }

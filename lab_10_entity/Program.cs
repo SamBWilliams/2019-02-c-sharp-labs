@@ -80,7 +80,7 @@ namespace lab_10_entity
             using (var db = new NorthwindEntities())
             {
                 Customer customerToDelete = db.Customers.Where
-                    (c => c.CustomerID == "5AMBW").FirstOrDefault();
+                    (c => c.CustomerID == "54MBW").FirstOrDefault();
                 
                 db.Customers.Remove(customerToDelete);
                 

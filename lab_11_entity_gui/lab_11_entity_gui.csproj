@@ -72,6 +72,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -82,6 +85,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthwindModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
     </Compile>
     <Compile Include="NorthwindModel.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,6 +133,12 @@
     <Content Include="NorthwindModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>NorthwindModel.Context.cs</LastGenOutput>
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="NorthwindModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+      <LastGenOutput>NorthwindModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
