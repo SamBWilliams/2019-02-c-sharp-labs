@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace lab_11_entity_gui
+namespace lab_11_Entity_GUI2
 {
     using System;
     using System.Collections.Generic;

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{21AA6075-C25A-4019-956B-C84DBE44D23A}</ProjectGuid>
+    <ProjectGuid>{53440403-2D08-4E90-8C0E-77EAEB3762D3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>lab_11_entity_gui</RootNamespace>
-    <AssemblyName>lab_11_entity_gui</AssemblyName>
+    <RootNamespace>lab_11_Entity_GUI2</RootNamespace>
+    <AssemblyName>lab_11_Entity_GUI2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -73,7 +73,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Customer.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -81,20 +81,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NorthwindModel.Context.cs">
+    <Compile Include="NorthWindModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.Context.tt</DependentUpon>
+      <DependentUpon>NorthWindModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindModel.cs">
+    <Compile Include="NorthWindModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
+      <DependentUpon>NorthWindModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindModel.Designer.cs">
+    <Compile Include="NorthWindModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+      <DependentUpon>NorthWindModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -113,12 +113,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="NorthwindModel.edmx">
+    <EntityDeploy Include="NorthWindModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NorthwindModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>NorthWindModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="NorthwindModel.edmx.diagram">
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+    <None Include="NorthWindModel.edmx.diagram">
+      <DependentUpon>NorthWindModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -130,15 +130,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NorthwindModel.Context.tt">
+    <Content Include="NorthWindModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>NorthwindModel.Context.cs</LastGenOutput>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+      <LastGenOutput>NorthWindModel.Context.cs</LastGenOutput>
+      <DependentUpon>NorthWindModel.edmx</DependentUpon>
     </Content>
-    <Content Include="NorthwindModel.tt">
+    <Content Include="NorthWindModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-      <LastGenOutput>NorthwindModel.cs</LastGenOutput>
+      <DependentUpon>NorthWindModel.edmx</DependentUpon>
+      <LastGenOutput>NorthWindModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

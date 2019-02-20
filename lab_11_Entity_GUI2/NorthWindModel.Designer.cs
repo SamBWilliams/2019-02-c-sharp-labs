@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\2019-02-c-sharp-labs\lab_11_entity_gui\NorthwindModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\2019-02-c-sharp-labs\lab_11_Entity_GUI2\NorthWindModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
