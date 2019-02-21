@@ -53,6 +53,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_13_polymorphism", "lab_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_113_arraylist", "lab_113_arraylist\lab_113_arraylist.csproj", "{CF7CF26E-103A-4B0B-B464-CA116B89E02B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_14_anotherOOP", "lab_14_anotherOOP\lab_14_anotherOOP.csproj", "{C3541DD2-0FAB-43E4-B483-64AEF7024E41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_114", "lab_114\lab_114.csproj", "{B3808DDE-8B29-429B-926A-6B0573FDC778}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +163,14 @@ Global
 		{CF7CF26E-103A-4B0B-B464-CA116B89E02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF7CF26E-103A-4B0B-B464-CA116B89E02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF7CF26E-103A-4B0B-B464-CA116B89E02B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3541DD2-0FAB-43E4-B483-64AEF7024E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3541DD2-0FAB-43E4-B483-64AEF7024E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3541DD2-0FAB-43E4-B483-64AEF7024E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3541DD2-0FAB-43E4-B483-64AEF7024E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3808DDE-8B29-429B-926A-6B0573FDC778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3808DDE-8B29-429B-926A-6B0573FDC778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3808DDE-8B29-429B-926A-6B0573FDC778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3808DDE-8B29-429B-926A-6B0573FDC778}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
