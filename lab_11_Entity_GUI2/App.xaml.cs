@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace lab_11_entity_gui
+namespace lab_11_Entity_GUI2
 {
     /// <summary>
     /// Interaction logic for App.xaml
