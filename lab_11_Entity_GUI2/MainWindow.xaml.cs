@@ -25,6 +25,7 @@ namespace lab_11_Entity_GUI2
         List<string> customerList = new List<string>();
         List<Customer> customers = new List<Customer>();
         Customer customer;
+        List<string> cities = new List<string>();
         public MainWindow()
         {
             InitializeComponent();
@@ -57,12 +58,36 @@ namespace lab_11_Entity_GUI2
                 Listbox03.DisplayMemberPath = "ContactName";
             }
 
+            //Populate static box
+            cBstaticCity.Items.Add("New York");
+            cBstaticCity.Items.Add("Paris");
+            cBstaticCity.Items.Add("London");
+
+            using(var db = new NorthwindEntities())
+            {
+                cities =
+                    (from cust in db.Customers
+                     select cust.City).Distinct().OrderBy(city=>city).ToList<string>(); //Descending
+                cBboundToCity.ItemsSource = cities;
+            }
+
         }
 
         private void Listbox03_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             customer = (Customer)Listbox03.SelectedItem;
             TextBoxName.Text = customer.ContactName;
+        }
+
+        private void CBstaticCity_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //MessageBox.Show($"You chose {cBstaticCity.SelectedItem}");
+
+        }
+
+        private void CBboundToCity_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

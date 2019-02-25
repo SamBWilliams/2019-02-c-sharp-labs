@@ -37,7 +37,8 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <ListBox x:Name="Listbox03" Grid.Column="2" Background="Yellow" Margin="0,126,-0.4,-0.4" Grid.RowSpan="4" SelectionChanged="Listbox03_SelectionChanged"/>
-
+        <ComboBox x:Name="cBstaticCity" Margin="15,59,254,10.4" Grid.ColumnSpan="2" SelectionChanged="CBstaticCity_SelectionChanged"/>
+        <ComboBox x:Name="cBboundToCity" Margin="16.4,59,0,10.4" Grid.Column="1" SelectionChanged="CBboundToCity_SelectionChanged"/>
 
     </Grid>
 </Window>
