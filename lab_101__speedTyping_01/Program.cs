@@ -12,8 +12,6 @@ namespace lab_101__speedTyping_01
 
         static void Main(string[] args)
         {
-            
-
             Console.WriteLine("Enter characters before time is up\n");
             Console.WriteLine("r) for Random characters\no) for ordered characters\n");
 
