@@ -1,0 +1,72 @@
+﻿<Window x:Class="lab_117_entity_tab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_117_entity_tab"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="auto" Width="auto" Background="#ace5b3">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="8*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ButtonAddCustomer" Background="#96ea98" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,676.6,0.4" Width="85" Click="ButtonAddCustomer_Click"/>
+        <TabControl x:Name="TabControl01" Grid.Row="2" Grid.Column="1">
+            <TabItem x:Name="Customers" Background="#84e8dc" Header="Customers">
+                <ListBox x:Name="ListBox01" Background="#b6d6ba" SelectionChanged="ListBox01_SelectionChanged" MouseDoubleClick="ListBox01_MouseDoubleClick" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="ID {0} - {1} from {2}">
+                                        <Binding Path="CustomerID" />
+                                        <Binding Path="ContactName" />
+                                        <Binding Path="City" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </TabItem>
+            <TabItem x:Name="Orders" Background="#84e8dc" Header="Orders" >
+                <ListBox x:Name="ListBoxOrders" Background="#b6d6ba" SelectionChanged="ListBox01_SelectionChanged" MouseDoubleClick="ListBoxOrders_MouseDoubleClick" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="ID {0} on {1}">
+                                        <Binding Path="OrderID" />
+                                        <Binding Path="OrderDate" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </TabItem>
+            <TabItem x:Name="Grid">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="16*" />
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="300*"/>
+                        <ColumnDefinition Width="335*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Button x:Name="Random" Background="red" Grid.ColumnSpan="3" Margin="0,0,0,195.8" Grid.RowSpan="2" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+</Window>

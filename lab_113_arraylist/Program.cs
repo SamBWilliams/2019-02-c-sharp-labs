@@ -13,6 +13,8 @@ namespace lab_113_arraylist
         {
             var arrList = new arrayList();
             arrList.arrayListMethod(10, 20, 30, 40);
+
+
         }
 
     }

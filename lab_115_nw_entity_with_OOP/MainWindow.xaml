@@ -1,0 +1,20 @@
+﻿<Window x:Class="lab_115_nw_entity_with_OOP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_115_nw_entity_with_OOP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Active" FontSize="30" HorizontalAlignment="Left" Margin="61,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="Inactive" FontSize="30" HorizontalAlignment="Left" Margin="292,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="Customer details" FontSize="30" HorizontalAlignment="Left" Margin="549,130,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="activeList" HorizontalAlignment="Left" Height="211" Margin="52,199,0,0" VerticalAlignment="Top" Width="141" SelectionChanged="ActiveList_SelectionChanged"/>
+        <ListBox x:Name="inactiveList" HorizontalAlignment="Left" Height="211" Margin="263,199,0,0" VerticalAlignment="Top" Width="141" SelectionChanged="InactiveList_SelectionChanged"/>
+        <ListBox x:Name="custDetails" HorizontalAlignment="Left" Height="211" Margin="549,199,0,0" VerticalAlignment="Top" Width="204"/>
+        <RadioButton x:Name="inactBtn" Content="Inactive" HorizontalAlignment="Left" Margin="432,246,0,0" VerticalAlignment="Top" Checked="InactBtn_Checked"/>
+        <RadioButton x:Name="actBtn"  Content="Active" HorizontalAlignment="Left" Margin="432,199,0,0" VerticalAlignment="Top" Checked="ActBtn_Checked"/>
+
+    </Grid>
+</Window>
