@@ -29,7 +29,7 @@ namespace lab_123_crud_05.Pages
         public void OnGet()
         {
 
-            ViewData["Title"] = "List of NorthWind Customers";
+            ViewData["Title"] = "List of Products";
             products = db.Products.ToList();
 
         }
@@ -46,7 +46,6 @@ namespace lab_123_crud_05.Pages
                     return RedirectToPage("/Products");
                 }
                 catch (Exception) { }
-
             }
             return Page();
         }

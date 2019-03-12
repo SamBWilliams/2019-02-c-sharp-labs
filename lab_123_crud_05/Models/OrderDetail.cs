@@ -9,11 +9,14 @@ namespace lab_123_crud_05.Models
 {
     public class OrderDetail
     {
-        [Key]
-        [Column(Order = 1)]
+        //[Key]
+        //[Column(Order = 1)]
+        //public int ProductID { get; set; }
+        //[Key]
+        //[Column(Order = 2)]
+        //public int OrderID { get; set; }
+
         public int ProductID { get; set; }
-        [Key]
-        [Column(Order = 2)]
         public int OrderID { get; set; }
 
         public int Quantity { get; set; }
@@ -23,6 +26,12 @@ namespace lab_123_crud_05.Models
         public OrderDetail(int productID)
         {
             this.ProductID = productID;
+        }
+
+        public OrderDetail(int productID, int orderID)
+        {
+            this.ProductID = productID;
+            this.OrderID = orderID;
         }
 
     }

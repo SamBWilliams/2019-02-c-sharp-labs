@@ -25,6 +25,9 @@ namespace lab_123_crud_05.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+             modelBuilder.Entity<OrderDetail>()
+            .HasKey(od => new { od.ProductID, od.OrderID });
         }
     }
 }
