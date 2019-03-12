@@ -55,6 +55,54 @@ namespace lab_30_northwind_to_xml
             var doc2 = XDocument.Load("Products.xml");
 
             //Creat object from products
+
+
+            //Recap
+            using (var db = new Northwind())
+            {
+                products = db.Products.Take(5).ToList();
+            }
+            //Created XML document from this list of products
+
+            var xml5 = new XElement("Products",
+                from p in products
+                select new XElement("Product",
+                    new XElement("ProductID", p.ProductID),
+                    new XElement("ProductName", p.ProductName),
+                    new XElement("Cost", p.Cost))
+                );
+
+            //Write to disk
+            var xmlDocument5 = new XDocument(xml5);
+            xmlDocument5.Save("FiveProducts.xml");
+
+            //Read back to string
+            Console.WriteLine("\n\nRead back 5 products\n\n");
+            Console.WriteLine(File.ReadAllText("FiveProducts.xml"));
+
+            //Deserialise
+            Console.WriteLine("\n\nDeserialise back into Product Objects\n\n");
+
+            //Create structue to hold list of desearialised object
+            var productList = new Products();
+
+            //Use streaming to get data here
+            using (var reader = new StreamReader("FiveProducts.xml"))
+            {
+                //Deserialise back into products
+                var serialiser = new XmlSerializer(typeof(Products));
+
+                //do the work
+                productList = (Products)serialiser.Deserialize(reader);
+            }
+
+            //job done; just output the list
+            foreach(Product p in productList.ProductList)
+            {
+                Console.WriteLine($"{p.ProductID, -10}{p.ProductName,-50}{p.Cost,-10}");
+            }
+            
+
         }
     }
     public class Category
@@ -81,7 +129,7 @@ namespace lab_30_northwind_to_xml
         public short? Stock { get; set; }
         public bool Discontinued { get; set; }
         public int CategoryID { get; set; }
-        public virtual Category Category { get; set; }
+        //public virtual Category Category { get; set; }
     }
 
 
