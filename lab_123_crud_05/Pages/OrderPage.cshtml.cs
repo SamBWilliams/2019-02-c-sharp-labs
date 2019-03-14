@@ -81,7 +81,9 @@ namespace lab_123_crud_05.Pages
                 products.Add(product);
                 foreach (var p in products)
                 {
-                    p.Stock += 1;
+                    var productToUpdate = db.Products.Where(prod => prod.ProductID == p.ProductID).FirstOrDefault();
+                    productToUpdate.Stock += 1;
+                    //p.Stock += 1;
                     
                     Order o = new Order(DateTime.Now,p.Price, p.ProductID);
                     db.Orders.Add(o);
