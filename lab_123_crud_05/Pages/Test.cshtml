@@ -1,0 +1,68 @@
+﻿@page
+@model lab_123_crud_05.Pages.TestModel
+@{
+    ViewData["Title"] = "Test";
+}
+
+<h2>Test</h2>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Stock)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model.products)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => p.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => p.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => p.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => p.Stock)
+                </td>
+                <td>
+                    <div class="form-group">
+                        <form method="post" action="custom">
+                            <div class="form-group">
+                                <input type="submit" value="Add to order" class="btn btn-default" formaction="AddToList" />
+                            </div>
+                        </form>
+                        <
+                    </div>
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="form-group">
+    <input type="submit" value="Submit order" class="btn btn-default" />
+</div>
+
+<form method="post" action="custom">
+    <div class="form-group">
+        <input type="submit" value="Submit order" class="btn btn-default" />
+    </div>
+</form>

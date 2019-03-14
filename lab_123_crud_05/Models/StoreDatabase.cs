@@ -19,8 +19,8 @@ namespace lab_123_crud_05.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string path = System.IO.Path.Combine(System.Environment.CurrentDirectory, "TestDB5");
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb;" + "Initial Catalog=TestDB5;" + "Integrated Security=true;" + "MultipleActiveResultSets=true;");
+            string path = System.IO.Path.Combine(System.Environment.CurrentDirectory, "TestDB4");
+            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb;" + "Initial Catalog=TestDB4;" + "Integrated Security=true;" + "MultipleActiveResultSets=true;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

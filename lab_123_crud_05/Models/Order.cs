@@ -9,7 +9,7 @@ namespace lab_123_crud_05.Models
     {
         public int OrderID { get; set; }
         public DateTime OrderDate { get; set; }
-        public double OrderTotal { get; set; }
+        public double Total { get; set; }
 
         public int ProductID { get; set; }
         public Order() { }
@@ -17,7 +17,14 @@ namespace lab_123_crud_05.Models
         public Order(DateTime ordDate, double ordTotal, int pID)
         {
             this.OrderDate = ordDate;
-            this.OrderTotal = ordTotal;
+            this.Total = ordTotal;
+            this.ProductID = pID;
+        }
+
+        public Order(double ordTotal, int pID)
+        {
+            //this.OrderDate = ordDate;
+            this.Total = ordTotal;
             this.ProductID = pID;
         }
 

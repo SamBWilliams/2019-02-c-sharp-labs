@@ -26,6 +26,8 @@ namespace lab_123_crud_05.Pages
             db = injectedContext;
         }
 
+        
+
         [BindProperty]
         public Product Product { get; set; }
 
@@ -50,14 +52,14 @@ namespace lab_123_crud_05.Pages
 
         //public IActionResult OnPost()
         //{
-        //   // Order o = new Order();
+        //    // Order o = new Order();
 
         //    products.Add(Product);
-        //    orders.Add(Order);
+        //    //orders.Add(Order);
 
         //    foreach (var p in products)
         //    {
-        //        foreach(var o in orders)
+        //        foreach (var o in orders)
         //        {
         //            OrderDetail od = new OrderDetail(p.ProductID, o.OrderID);
         //            db.OrderDetails.Add(od);
@@ -79,11 +81,15 @@ namespace lab_123_crud_05.Pages
                 products.Add(product);
                 foreach (var p in products)
                 {
-                    Order o = new Order(DateTime.Now, p.Price, p.ProductID);
-                    db.Orders.Add(o);                   
+                    p.Stock += 1;
+                    
+                    Order o = new Order(DateTime.Now,p.Price, p.ProductID);
+                    db.Orders.Add(o);
                     db.SaveChanges();
-                }               
+
+                }
             }
+
             return Page();
         }
 
