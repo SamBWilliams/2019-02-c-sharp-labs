@@ -46,10 +46,11 @@
                     <div class="form-group">
                         <form method="post" action="custom">
                             <div class="form-group">
-                                <input type="submit" value="Add to order" class="btn btn-default" formaction="AddToList" />
+                                <input type="button" value="Add to order" class="btn btn-default" 
+                                       onclick="location.href='@Url.Action("AddToList", "TestModel")" />
                             </div>
                         </form>
-                        <
+                        
                     </div>
                     
                 </td>
@@ -60,9 +61,3 @@
 <div class="form-group">
     <input type="submit" value="Submit order" class="btn btn-default" />
 </div>
-
-<form method="post" action="custom">
-    <div class="form-group">
-        <input type="submit" value="Submit order" class="btn btn-default" />
-    </div>
-</form>

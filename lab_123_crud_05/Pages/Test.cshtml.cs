@@ -31,10 +31,8 @@ namespace lab_123_crud_05.Pages
         //HTTP GET REQUEST
         public void OnGet()
         {
-
             ViewData["Title"] = "List of Products";
             products = db.Products.ToList();
-
         }
 
         
@@ -51,10 +49,8 @@ namespace lab_123_crud_05.Pages
             if (ModelState.IsValid)
             {
                 //products.Add(product);
-                foreach (var p in products)
-                {
-                    p.Stock += 1;
-
+                foreach (var p in basket)
+                {                    
                     Order o = new Order(DateTime.Now, p.Price, p.ProductID);
                     db.Orders.Add(o);
                     db.SaveChanges();

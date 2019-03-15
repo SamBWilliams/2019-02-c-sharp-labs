@@ -133,15 +133,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_123_crud_website", "lab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_123_crud_02", "lab_123_crud_02\lab_123_crud_02.csproj", "{CD07D119-F847-4DAC-B2A7-A3DB379954C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_123_crud_api", "lab_123_crud_03\lab_123_crud_api.csproj", "{3D4FC4D8-2EEB-477D-8D67-8DB6932B2AD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_123_crud_api", "lab_123_crud_03\lab_123_crud_api.csproj", "{3D4FC4D8-2EEB-477D-8D67-8DB6932B2AD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_123_crud_04", "lab_123_crud_04\lab_123_crud_04.csproj", "{DCF64D3A-397A-4948-AD28-6208630EEF3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_123_crud_04", "lab_123_crud_04\lab_123_crud_04.csproj", "{DCF64D3A-397A-4948-AD28-6208630EEF3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_123_crud_05", "lab_123_crud_05\lab_123_crud_05.csproj", "{DDFF24D4-1ED8-4F78-AEE2-2D5AD00B9723}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_123_crud_05", "lab_123_crud_05\lab_123_crud_05.csproj", "{DDFF24D4-1ED8-4F78-AEE2-2D5AD00B9723}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_123_crud_06_paused", "lab_123_crud_06\lab_123_crud_06_paused.csproj", "{5076B649-2ADB-4401-A3A8-DEA6F2CA2C3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_123_crud_06_paused", "lab_123_crud_06\lab_123_crud_06_paused.csproj", "{5076B649-2ADB-4401-A3A8-DEA6F2CA2C3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_123_crud_07_paused", "lab_123_crud_07\lab_123_crud_07_paused.csproj", "{97C80ADE-70B3-451D-819F-F0334BD442BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_123_crud_07_paused", "lab_123_crud_07\lab_123_crud_07_paused.csproj", "{97C80ADE-70B3-451D-819F-F0334BD442BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_124_connect_to_azure", "lab_124_connect_to_azure\lab_124_connect_to_azure.csproj", "{8304D38B-F4AD-4A13-AFD5-31B7838E3390}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -429,6 +431,10 @@ Global
 		{97C80ADE-70B3-451D-819F-F0334BD442BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97C80ADE-70B3-451D-819F-F0334BD442BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97C80ADE-70B3-451D-819F-F0334BD442BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8304D38B-F4AD-4A13-AFD5-31B7838E3390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8304D38B-F4AD-4A13-AFD5-31B7838E3390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8304D38B-F4AD-4A13-AFD5-31B7838E3390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8304D38B-F4AD-4A13-AFD5-31B7838E3390}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
