@@ -36,15 +36,18 @@ namespace Northwind_app
             //    orders.ItemsSource = oRows.ToList();
             //}
 
-            using (var db = new NorthwindEntities())
-            {
-                var ordDeets =
-                    (from od in db.Order_Details
-                     where od.OrderID == ord.OrderID
-                     select new { od.ProductID, od.Product, od.Quantity, od.UnitPrice });
+            //using (var db = new NorthwindEntities())
+            //{
+            //    var ordDeets =
+            //        (from od in db.Order_Details
+            //         where od.OrderID == ord.OrderID
+            //         select new { od.ProductID, od.Product, od.Quantity, od.UnitPrice });
 
-                orderDet.ItemsSource = ordDeets.ToList();
-            }
+            //    orderDet.ItemsSource = ordDeets.ToList();
+            //}
+
+            idTxt.Text = ord.OrderID.ToString();
+            
 
         }
 

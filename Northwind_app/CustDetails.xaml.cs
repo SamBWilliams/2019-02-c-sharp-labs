@@ -89,8 +89,12 @@ namespace Northwind_app
 
         private void Row_Click(object sender, MouseButtonEventArgs e)
         {
+            var orderId = orderHistory.SelectedCells.ToString();
 
-            order = orderHistory.SelectedItem as Order;
+            
+            // order =(Order)orderId;
+            //MessageBox.Show(Convert.ToString(orderHistory.SelectedCells));
+            //MessageBox.Show(orderId);
             OrderDetails od = new OrderDetails();
             od.Show();
             od.initialize(order);

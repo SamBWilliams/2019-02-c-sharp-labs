@@ -23,6 +23,7 @@ namespace Northwind_app
     public partial class CustomerWindow : Window
     {
 
+        Queries query = new Queries();
         public static Customer customer;
         NorthwindEntities db = new NorthwindEntities();
         string queryType;
@@ -58,25 +59,14 @@ namespace Northwind_app
             //    whereCond = customer.CompanyName;
             //}
 
+            string name = nameTxt.Text;
+            query.searchByName(name, custTable);
+            //custTable.ItemsSource = queries.searchByName(name, custTable).ToList;
 
-            if (nameTxt.Text != "") { searchByName(); }
-            else if (compTxt.Text != "") { searchByCompany(); }
 
-            //using (var db = new NorthwindEntities())
-            //{
-            //    //var whereCond = customer.ContactName;
-            //    //if (searchType.Text == "CompanyName")
-            //    //{
-            //    //    whereCond = customer.CompanyName;
-            //    //}
 
-            //    //var searchCustomer = searchType.SelectedItem;
-            //    var searchQuery =
-            //        (from cust in db.Customers
-            //         where whereCond == nameTxt.Text
-            //         select cust);
-            //    custTable.ItemsSource = searchQuery.ToList();
-            //}
+            //if (nameTxt.Text != "") { searchByName(); }
+            //else if (compTxt.Text != "") { searchByCompany(); }
 
         }
 
@@ -123,6 +113,22 @@ namespace Northwind_app
             var comboBoxItem = (ComboBoxItem)searchType.SelectedItem;
             queryType = comboBoxItem.Content.ToString();
             MessageBox.Show("query type will be " + queryType);
+        }
+    }
+
+    class Queries
+    {
+        public void searchByName(string name, DataGrid table)
+        {
+            using (var db = new NorthwindEntities())
+            {
+                var searchQuery =
+                    (from customer in db.Customers
+                     where customer.ContactName == name
+                     select customer);
+                table.ItemsSource = searchQuery.ToList();
+                //return searchQuery.ToList();
+            }
         }
     }
 }

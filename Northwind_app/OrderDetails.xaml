@@ -9,6 +9,8 @@
     <Grid>
         <Button x:Name="backBtn" Content="Back" HorizontalAlignment="Left" Margin="390,485,0,0" VerticalAlignment="Top" Width="117" Height="36" Click="BackBtn_Click"/>
         <DataGrid x:Name="orderDet" IsReadOnly="True" HorizontalAlignment="Left" Height="283" Margin="302,137,0,0" VerticalAlignment="Top" Width="323"/>
+        <Label  Content="ID:" FontSize="15" HorizontalAlignment="Left" Margin="11,49,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="idTxt" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="93,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

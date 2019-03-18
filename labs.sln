@@ -143,9 +143,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_123_crud_06_paused", "l
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_123_crud_07_paused", "lab_123_crud_07\lab_123_crud_07_paused.csproj", "{97C80ADE-70B3-451D-819F-F0334BD442BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_124_connect_to_azure", "lab_124_connect_to_azure\lab_124_connect_to_azure.csproj", "{8304D38B-F4AD-4A13-AFD5-31B7838E3390}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_124_connect_to_azure", "lab_124_connect_to_azure\lab_124_connect_to_azure.csproj", "{8304D38B-F4AD-4A13-AFD5-31B7838E3390}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind_app", "Northwind_app\Northwind_app.csproj", "{943E378C-3025-446A-8815-9AD8A2D8C786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_Dot_Net_IIS", "ASP_Dot_Net_IIS\ASP_Dot_Net_IIS.csproj", "{13B8BE1A-D0E1-4F8C-A393-A1874096CD0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_IIS", "ASP_IIS\ASP_IIS.csproj", "{C39D0913-DA96-477F-88F9-E5CDF9ACEF20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -441,6 +445,14 @@ Global
 		{943E378C-3025-446A-8815-9AD8A2D8C786}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{943E378C-3025-446A-8815-9AD8A2D8C786}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{943E378C-3025-446A-8815-9AD8A2D8C786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13B8BE1A-D0E1-4F8C-A393-A1874096CD0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B8BE1A-D0E1-4F8C-A393-A1874096CD0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B8BE1A-D0E1-4F8C-A393-A1874096CD0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B8BE1A-D0E1-4F8C-A393-A1874096CD0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C39D0913-DA96-477F-88F9-E5CDF9ACEF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C39D0913-DA96-477F-88F9-E5CDF9ACEF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C39D0913-DA96-477F-88F9-E5CDF9ACEF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C39D0913-DA96-477F-88F9-E5CDF9ACEF20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

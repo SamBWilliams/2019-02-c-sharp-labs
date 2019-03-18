@@ -19,7 +19,7 @@ namespace Northwind_app
         {
             this.Order_Details = new HashSet<Order_Detail>();
         }
-    
+
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
         public Nullable<int> EmployeeID { get; set; }
