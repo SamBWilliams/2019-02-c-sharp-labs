@@ -102,6 +102,7 @@
     <Compile Include="ProductsWindow.xaml.cs">
       <DependentUpon>ProductsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Queries.cs" />
     <Compile Include="Region.cs">
       <DependentUpon>NorthwindModel.tt</DependentUpon>
     </Compile>

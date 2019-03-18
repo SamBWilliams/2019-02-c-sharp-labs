@@ -20,8 +20,8 @@ namespace Northwind_app
     public partial class CustDetails : Window
     {
         //Customer customer;
-        Order order;
-        
+        public static Order order;
+        Queries query = new Queries();
         public CustDetails()
         {
             InitializeComponent();
@@ -50,41 +50,19 @@ namespace Northwind_app
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            using(var db = new NorthwindEntities())
-            {
-                var updateCustomer =
-                    db.Customers.Where(c => c.CustomerID == idTxt.Text).FirstOrDefault();
+            string id = idTxt.Text;
+            string name = nameTxt.Text;
+            string company = compTxt.Text;
 
-                updateCustomer.ContactName = nameTxt.Text;
-                updateCustomer.CompanyName = compTxt.Text;
-                db.SaveChanges();
-            }
+            query.updateCustomer(id, name, company);
+
+
         }
 
         private void OrderBtn_Click(object sender, RoutedEventArgs e)
         {
-            //using (var db = new NorthwindEntities())
-            //{
-            //    var orderDetailsQuery =
-            //        (from ord in db.Orders
-            //         join cust in db.Customers
-            //         on ord.CustomerID equals CustomerWindow.customer.CustomerID
-            //         where CustomerWindow.customer.ContactName == nameTxt.Text
-            //         select new { ord.OrderID, ord.OrderDate, CustomerWindow.customer.ContactName }
-            //         );
-
-            //    orderHistory.ItemsSource = orderDetailsQuery.ToList();
-            //}
-
-            using (var db = new NorthwindEntities())
-            {
-                var custOrders =
-                    (from ord in db.Orders
-                     where CustomerWindow.customer.CustomerID == idTxt.Text
-                     select new { ord.OrderID, ord.OrderDate, ord.EmployeeID /*CustomerWindow.customer.ContactName*/ });
-
-                orderHistory.ItemsSource = custOrders.ToList();
-            }
+            string id = idTxt.Text;
+            query.showCustOrders(id, orderHistory);
         }
 
         private void Row_Click(object sender, MouseButtonEventArgs e)

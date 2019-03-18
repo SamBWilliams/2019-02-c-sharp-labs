@@ -53,45 +53,13 @@ namespace Northwind_app
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
-            //var whereCond = customer.ContactName;
-            //if (searchType.Text == "CompanyName")
-            //{
-            //    whereCond = customer.CompanyName;
-            //}
-
             string name = nameTxt.Text;
-            query.searchByName(name, custTable);
-            //custTable.ItemsSource = queries.searchByName(name, custTable).ToList;
+            string company = compTxt.Text;
+
+            if(nameTxt.Text != "") query.searchByName(name, custTable);
+            else if (compTxt.Text != "") query.searchByCompany(company, custTable);
 
 
-
-            //if (nameTxt.Text != "") { searchByName(); }
-            //else if (compTxt.Text != "") { searchByCompany(); }
-
-        }
-
-        public void searchByName()
-        {
-            using (var db = new NorthwindEntities())
-            {
-                var searchQuery =
-                    (from customer in db.Customers
-                     where customer.ContactName == nameTxt.Text
-                     select customer);
-                custTable.ItemsSource = searchQuery.ToList();
-            }
-        }
-
-        public void searchByCompany()
-        {
-            using (var db = new NorthwindEntities())
-            {
-                var searchQuery =
-                    (from customer in db.Customers
-                     where customer.CompanyName == compTxt.Text
-                     select customer);
-                custTable.ItemsSource = searchQuery.ToList();
-            }
         }
 
         private void CustTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -113,22 +81,6 @@ namespace Northwind_app
             var comboBoxItem = (ComboBoxItem)searchType.SelectedItem;
             queryType = comboBoxItem.Content.ToString();
             MessageBox.Show("query type will be " + queryType);
-        }
-    }
-
-    class Queries
-    {
-        public void searchByName(string name, DataGrid table)
-        {
-            using (var db = new NorthwindEntities())
-            {
-                var searchQuery =
-                    (from customer in db.Customers
-                     where customer.ContactName == name
-                     select customer);
-                table.ItemsSource = searchQuery.ToList();
-                //return searchQuery.ToList();
-            }
         }
     }
 }
