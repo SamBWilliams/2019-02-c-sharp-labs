@@ -19,7 +19,8 @@ namespace Northwind_app
     /// </summary>
     public partial class ProductsWindow : Window
     {
-        Product product;
+        public static Product product;
+        Queries query = new Queries();
         public ProductsWindow()
         {
             InitializeComponent();
@@ -33,11 +34,8 @@ namespace Northwind_app
                 var rows = db.Products.Select(row => row);
                 productTable.ItemsSource = rows.ToList();
             }
+            
         }
-
-
-
-
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -60,6 +58,24 @@ namespace Northwind_app
                      });
                 productTable.ItemsSource = averageQuery.ToList();
             }
+        }
+
+        private void SubBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int amount = int.Parse(stockTxt.Text);
+
+                if (highLow.Text == "Higher than") query.showStockHigher(amount, productTable);
+                else if (highLow.Text == "Lower than") query.showStockLower(amount, productTable);
+            }
+            catch (Exception) { MessageBox.Show("Enter a value to check"); }
+            
+        }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            initialize();
         }
     }
 }

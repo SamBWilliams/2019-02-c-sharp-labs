@@ -14,8 +14,8 @@
         <TextBox x:Name="nameTxt" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="93,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label  Content="Company:" FontSize="15" HorizontalAlignment="Left" Margin="11,141,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="compTxt" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="93,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="editBtn" Content="Edit" HorizontalAlignment="Left" Margin="13,212,0,0" VerticalAlignment="Top" Width="75" Click="EditBtn_Click"/>
-        <Button x:Name="saveBtn" Content="Save" HorizontalAlignment="Left" Margin="123,212,0,0" VerticalAlignment="Top" Width="75" Click="SaveBtn_Click"/>
+        <Button x:Name="editBtn" Content="Edit" HorizontalAlignment="Left" Margin="13,200,0,0" VerticalAlignment="Top" Width="75" Click="EditBtn_Click"/>
+        <Button x:Name="saveBtn" Content="Save" HorizontalAlignment="Left" Margin="75,244,0,0" VerticalAlignment="Top" Width="75" Click="SaveBtn_Click"/>
         <Button x:Name="orderBtn" Content="View Orders" HorizontalAlignment="Left" Margin="363,30,0,0" VerticalAlignment="Top" Width="95" Height="42" Click="OrderBtn_Click"/>
         <DataGrid x:Name="orderHistory" HorizontalAlignment="Left" Height="211" Margin="245,105,0,0" VerticalAlignment="Top" Width="297" SelectionChanged="OrderHistory_SelectionChanged" SelectionUnit="Cell">
             <DataGrid.ItemContainerStyle>
@@ -29,6 +29,7 @@
            
         </DataGrid>
         <Button x:Name="ordDetailBtn" Content="Show Order Details" HorizontalAlignment="Left" Margin="341,344,0,0" VerticalAlignment="Top" Width="117" Height="40" Click="OrdDetailBtn_Click"/>
+        <Button x:Name="delBtn" Content="Delete" HorizontalAlignment="Left" Margin="138,200,0,0" VerticalAlignment="Top" Width="75" Click="DelBtn_Click"/>
 
 
 

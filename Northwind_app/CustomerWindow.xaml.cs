@@ -53,13 +53,14 @@ namespace Northwind_app
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
-            string name = nameTxt.Text;
-            string company = compTxt.Text;
+            string search = nameTxt.Text;
+            string titleSearch = titles.Text;
 
-            if(nameTxt.Text != "") query.searchByName(name, custTable);
-            else if (compTxt.Text != "") query.searchByCompany(company, custTable);
+            if(searchType.Text == "ContactName") query.searchByName(search, custTable);   
+            else if(searchType.Text == "CompanyName") query.searchByCompany(search, custTable);
+            else if(searchType.Text == "ContactTitle") query.searchByTitle(titleSearch, custTable);
 
-
+            
         }
 
         private void CustTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -76,11 +77,33 @@ namespace Northwind_app
             this.Close();
         }
 
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            initialize();
+        }
+
         private void SearchType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var comboBoxItem = (ComboBoxItem)searchType.SelectedItem;
-            queryType = comboBoxItem.Content.ToString();
-            MessageBox.Show("query type will be " + queryType);
+            string selection = comboBoxItem.Content.ToString();
+
+            if (selection == "ContactTitle")
+            {
+                titles.Visibility = Visibility.Visible;
+                nameTxt.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                titles.Visibility = Visibility.Hidden;
+                nameTxt.Visibility = Visibility.Visible;
+            }
+                
+        }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            CreateCustomer cc = new CreateCustomer();
+            cc.Show();
         }
     }
 }

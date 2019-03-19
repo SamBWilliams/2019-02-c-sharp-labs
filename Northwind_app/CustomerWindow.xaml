@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="CustomerWindow" Height="auto" Width="949.2">
     <Grid Margin="10,0,3.6,-4">
-        <Button x:Name="backBtn" Content="Go back" HorizontalAlignment="Left" Margin="22,434,0,0" VerticalAlignment="Top" Width="115" Height="46" Click="BackBtn_Click"/>
-        <DataGrid x:Name="custTable" IsReadOnly="True" HorizontalAlignment="Left" Height="283" Margin="181,197,0,0" VerticalAlignment="Top" Width="705" SelectionChanged="CustTable_SelectionChanged">
+        <Button x:Name="backBtn" Content="Go back" HorizontalAlignment="Left" Margin="402,430,0,0" VerticalAlignment="Top" Width="115" Height="46" Click="BackBtn_Click"/>
+        <DataGrid x:Name="custTable" IsReadOnly="True" HorizontalAlignment="Left" Height="283" Margin="22,103,0,0" VerticalAlignment="Top" Width="841" SelectionChanged="CustTable_SelectionChanged">
             <DataGrid.ItemContainerStyle>
                 <Style TargetType="DataGridRow">
                     <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
@@ -16,16 +16,27 @@
             </DataGrid.ItemContainerStyle>
 
         </DataGrid>
-        <Label Content="Search by name:" HorizontalAlignment="Left" Margin="181,28,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="nameTxt" HorizontalAlignment="Left" Height="23" Margin="280,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Search by:" HorizontalAlignment="Left" Margin="86,28,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nameTxt" HorizontalAlignment="Left" Height="23" Margin="297,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="searchBtn" Content="Search" HorizontalAlignment="Left" Margin="442,35,0,0" VerticalAlignment="Top" Width="75" Click="SearchBtn_Click"/>
-        <TextBox x:Name="compTxt" HorizontalAlignment="Left" Height="23" Margin="280,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Search by company:" HorizontalAlignment="Left" Margin="165,73,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="searchType" HorizontalAlignment="Left" Margin="264,125,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SearchType_SelectionChanged">
+        <ComboBox x:Name="searchType" HorizontalAlignment="Left" Margin="155,32,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SearchType_SelectionChanged">
             <ComboBoxItem Content="ContactName" />
             <ComboBoxItem Content="CompanyName"/>
-            <ComboBoxItem Content="ContactName"/>
+            <ComboBoxItem Content="ContactTitle"/>
         </ComboBox>
+        <Button x:Name="reset" Content="Reset" HorizontalAlignment="Left" Margin="442,79,0,0" VerticalAlignment="Top" Width="75" Click="Reset_Click"/>
+        <ComboBox x:Name="titles" HorizontalAlignment="Left" Margin="297,31,0,0" VerticalAlignment="Top" Width="120" Visibility="Hidden">
+            <ComboBoxItem Content="Accounting Manager" />
+            <ComboBoxItem Content="Assistant Sales Agent"/>
+            <ComboBoxItem Content="Marketing Assitant" />
+            <ComboBoxItem Content="Marketing Manager"/>
+            <ComboBoxItem Content="Order Administrator"/>
+            <ComboBoxItem Content="Owner" />
+            <ComboBoxItem Content="Sales Agent"/>
+            <ComboBoxItem Content="Sales Manager"/>
+            <ComboBoxItem Content="Sales Representative"/>
+        </ComboBox>
+        <Button x:Name="addBtn" Content="Create new customer" HorizontalAlignment="Left" Margin="616,35,0,0" VerticalAlignment="Top" Width="129" Height="44" Click="AddBtn_Click"/>
 
     </Grid>
 </Window>

@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Northwind_app"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="500">
     <Grid>
-        <Label Content="Home" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Height="79" Width="110" Margin="312,64,0,0"/>
-        <Button Content="Customers" HorizontalAlignment="Left" Margin="147,181,0,0" VerticalAlignment="Top" Width="123" Height="55" Click="Button_Click"/>
-        <Button x:Name="ordDetBtn" Content="Orders" HorizontalAlignment="Left" Margin="463,181,0,0" VerticalAlignment="Top" Width="123" Height="55" Click="OrdDetBtn_Click"/>
-        <Button x:Name="prodBtn" Content="Products" HorizontalAlignment="Left" Margin="312,278,0,0" VerticalAlignment="Top" Width="134" Height="74" Click="ProdBtn_Click"/>
+        <Label Content="Home" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Height="79" Width="110" Margin="187,10,0,0"/>
+        <Button Content="Customers" HorizontalAlignment="Left" Margin="51,143,0,0" VerticalAlignment="Top" Width="123" Height="55" Click="Button_Click"/>
+        <Button x:Name="ordDetBtn" Content="Orders" HorizontalAlignment="Left" Margin="299,143,0,0" VerticalAlignment="Top" Width="123" Height="55" Click="OrdDetBtn_Click"/>
+        <Button x:Name="prodBtn" Content="Products" HorizontalAlignment="Left" Margin="51,259,0,0" VerticalAlignment="Top" Width="123" Height="56" Click="ProdBtn_Click"/>
+        <Button x:Name="employeeBtn" Content="Employees" HorizontalAlignment="Left" Margin="299,259,0,0" VerticalAlignment="Top" Width="123" Height="56" Click="ProdBtn_Click"/>
 
     </Grid>
 </Window>

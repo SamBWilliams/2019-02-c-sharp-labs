@@ -55,8 +55,6 @@ namespace Northwind_app
             string company = compTxt.Text;
 
             query.updateCustomer(id, name, company);
-
-
         }
 
         private void OrderBtn_Click(object sender, RoutedEventArgs e)
@@ -124,6 +122,12 @@ namespace Northwind_app
                     orderDetails.ItemsSource = ordDeets.ToList();
                 }
             }
+        }
+
+        private void DelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string id = idTxt.Text;
+            query.deleteCustomer(id);
         }
     }
 }

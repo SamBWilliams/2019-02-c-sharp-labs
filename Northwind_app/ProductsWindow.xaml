@@ -5,11 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Northwind_app"
         mc:Ignorable="d"
-        Title="ProductsWindow" Height="450" Width="800">
+        Title="ProductsWindow" Height="500" Width="1000">
     <Grid>
-        <Button x:Name="backBtn" Content="Back" HorizontalAlignment="Left" Margin="307,340,0,0" VerticalAlignment="Top" Width="118" Height="47" Click="BackBtn_Click"/>
-        <DataGrid x:Name="productTable" HorizontalAlignment="Left" Height="234" Margin="126,72,0,0" VerticalAlignment="Top" Width="475"/>
-        <Button x:Name="avgByCat" Content="Button" HorizontalAlignment="Left" Margin="700,251,0,0" VerticalAlignment="Top" Width="75" Click="AvgByCat_Click"/>
+        <Button x:Name="backBtn" Content="Back" HorizontalAlignment="Left" Margin="444,398,0,0" VerticalAlignment="Top" Width="118" Height="47" Click="BackBtn_Click"/>
+        <DataGrid x:Name="productTable" HorizontalAlignment="Left" Height="310" Margin="444,47,0,0" VerticalAlignment="Top" Width="518"/>
+        <Button x:Name="avgByCat" Content="Button" HorizontalAlignment="Left" Margin="30,319,0,0" VerticalAlignment="Top" Width="75" Click="AvgByCat_Click"/>
+        <Label Content="View stock:" FontSize="20" HorizontalAlignment="Left" Margin="30,47,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="highLow" HorizontalAlignment="Left" Margin="144,61,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.457,0.466">
+            <ComboBoxItem Content="Higher than"/>
+            <ComboBoxItem Content="Lower than"/>
+        </ComboBox>
+        <TextBox x:Name="stockTxt" FontSize="20" HorizontalAlignment="Left" Height="25" Margin="289,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
+        <Button x:Name="subBtn" Content="Submit" HorizontalAlignment="Left" Margin="172,107,0,0" VerticalAlignment="Top" Width="75" Height="28" Click="SubBtn_Click"/>
+        <Button x:Name="refresh" Content="Refresh" HorizontalAlignment="Left" Margin="834,402,0,0" VerticalAlignment="Top" Width="108" Height="39" Click="Refresh_Click"/>
 
     </Grid>
 </Window>
