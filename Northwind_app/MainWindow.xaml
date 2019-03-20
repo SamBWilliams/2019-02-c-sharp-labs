@@ -7,11 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="500">
     <Grid>
-        <Label Content="Home" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Height="79" Width="110" Margin="187,10,0,0"/>
-        <Button Content="Customers" HorizontalAlignment="Left" Margin="51,143,0,0" VerticalAlignment="Top" Width="123" Height="55" Click="Button_Click"/>
-        <Button x:Name="ordDetBtn" Content="Orders" HorizontalAlignment="Left" Margin="299,143,0,0" VerticalAlignment="Top" Width="123" Height="55" Click="OrdDetBtn_Click"/>
-        <Button x:Name="prodBtn" Content="Products" HorizontalAlignment="Left" Margin="51,259,0,0" VerticalAlignment="Top" Width="123" Height="56" Click="ProdBtn_Click"/>
-        <Button x:Name="employeeBtn" Content="Employees" HorizontalAlignment="Left" Margin="299,259,0,0" VerticalAlignment="Top" Width="123" Height="56" Click="ProdBtn_Click"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF16466C" Offset="0"/>
+                <GradientStop Color="#FF3E81B7" Offset="0.641"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Northwind" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Height="79" Width="177" Margin="158,39,0,0" Foreground="#FFF7F7F7" FontFamily="Segoe UI Black"/>
+        <Button Content="Customers" HorizontalAlignment="Left" Margin="51,143,0,0" VerticalAlignment="Top" Width="123" Height="55" Click="Button_Click" FontFamily="Neue Haas Grotesk Text Pro Medium" FontSize="20" Background="#FF48A325" Foreground="White"/>
+        <Button x:Name="ordDetBtn" Content="Orders" HorizontalAlignment="Left" Margin="299,143,0,0" VerticalAlignment="Top" Width="123" Height="55" Click="OrdDetBtn_Click" FontFamily="Neue Haas Grotesk Text Pro Medium" FontSize="20" Background="#FF48A325" Foreground="White"/>
+        <Button x:Name="prodBtn" Content="Products" HorizontalAlignment="Left" Margin="51,259,0,0" VerticalAlignment="Top" Width="123" Height="56" Click="ProdBtn_Click" FontFamily="Neue Haas Grotesk Text Pro Medium" FontSize="20" Background="#FF48A325" Foreground="White"/>
+        <Button x:Name="employeeBtn" Content="Employees" HorizontalAlignment="Left" Margin="299,259,0,0" VerticalAlignment="Top" Width="123" Height="56" Click="ProdBtn_Click" FontFamily="Neue Haas Grotesk Text Pro Medium" FontSize="20" Background="#FF48A325" Foreground="White"/>
 
     </Grid>
 </Window>

@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Northwind_app"
         mc:Ignorable="d"
-        Title="CreateCustomer" Height="450" Width="800">
-    <Grid>
-        <Label Content="Name:" FontSize="25" HorizontalAlignment="Left" Margin="155,44,0,0" VerticalAlignment="Top"/>
-        <Label Content="CompanyName:" FontSize="25" HorizontalAlignment="Left" Margin="49,114,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="nameTxt" FontSize="25" HorizontalAlignment="Left" Height="41" Margin="262,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248"/>
-        <TextBox x:Name="compTxt" FontSize="25" HorizontalAlignment="Left" Height="41" Margin="262,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248"/>
-        <Button x:Name="addBtn" Content="Add" HorizontalAlignment="Left" Margin="324,265,0,0" VerticalAlignment="Top" Width="103" Height="41" Click="AddBtn_Click"/>
+        Title="CreateCustomer" Height="300" Width="450">
+    <Grid Background="#FFD36363">
+        <Label Content="Name:" FontSize="20" HorizontalAlignment="Left" Margin="95,44,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="CompanyName:" FontSize="20" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="nameTxt" FontSize="25" HorizontalAlignment="Left" Height="41" Margin="167,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248"/>
+        <TextBox x:Name="compTxt" FontSize="25" HorizontalAlignment="Left" Height="41" Margin="167,114,-21.4,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248"/>
+        <Button x:Name="addBtn" Content="Add" HorizontalAlignment="Left" Margin="167,194,0,0" VerticalAlignment="Top" Width="103" Height="41" Click="AddBtn_Click" FontFamily="Neue Haas Grotesk Text Pro Medium" FontSize="20" Background="#FF48A325" Foreground="White"/>
 
     </Grid>
 </Window>

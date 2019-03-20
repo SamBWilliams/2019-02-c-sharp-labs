@@ -6,18 +6,21 @@
         xmlns:local="clr-namespace:Northwind_app"
         mc:Ignorable="d"
         Title="ProductsWindow" Height="500" Width="1000">
-    <Grid>
-        <Button x:Name="backBtn" Content="Back" HorizontalAlignment="Left" Margin="444,398,0,0" VerticalAlignment="Top" Width="118" Height="47" Click="BackBtn_Click"/>
-        <DataGrid x:Name="productTable" HorizontalAlignment="Left" Height="310" Margin="444,47,0,0" VerticalAlignment="Top" Width="518"/>
-        <Button x:Name="avgByCat" Content="Button" HorizontalAlignment="Left" Margin="30,319,0,0" VerticalAlignment="Top" Width="75" Click="AvgByCat_Click"/>
-        <Label Content="View stock:" FontSize="20" HorizontalAlignment="Left" Margin="30,47,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="highLow" HorizontalAlignment="Left" Margin="144,61,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.457,0.466">
+    <Grid Background="#FF6065B9">
+        <Button x:Name="backBtn" Content="Back" HorizontalAlignment="Left" Margin="444,398,0,0" VerticalAlignment="Top" Width="118" Height="47" Click="BackBtn_Click" FontSize="20" Background="#FF48A325" Foreground="White"/>
+        <DataGrid x:Name="productTable" HorizontalAlignment="Left" Height="222" Margin="371,135,0,0" VerticalAlignment="Top" Width="518"/>
+        <Button x:Name="avgByCat" Content="Show" HorizontalAlignment="Left" Margin="255,301,0,0" VerticalAlignment="Top" Width="75" Click="AvgByCat_Click"/>
+        <Label Content="View stock:" FontSize="20" HorizontalAlignment="Left" Margin="127,107,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox x:Name="highLow" HorizontalAlignment="Left" Margin="30,155,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.457,0.466">
             <ComboBoxItem Content="Higher than"/>
             <ComboBoxItem Content="Lower than"/>
         </ComboBox>
-        <TextBox x:Name="stockTxt" FontSize="20" HorizontalAlignment="Left" Height="25" Margin="289,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
-        <Button x:Name="subBtn" Content="Submit" HorizontalAlignment="Left" Margin="172,107,0,0" VerticalAlignment="Top" Width="75" Height="28" Click="SubBtn_Click"/>
-        <Button x:Name="refresh" Content="Refresh" HorizontalAlignment="Left" Margin="834,402,0,0" VerticalAlignment="Top" Width="108" Height="39" Click="Refresh_Click"/>
+        <TextBox x:Name="stockTxt" FontSize="20" HorizontalAlignment="Left" Height="25" Margin="155,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
+        <Button x:Name="subBtn" Content="Submit" HorizontalAlignment="Left" Margin="255,155,0,0" VerticalAlignment="Top" Width="75" Height="28" Click="SubBtn_Click"/>
+        <Button x:Name="refresh" Content="Refresh" Margin="781,398,104.6,0" VerticalAlignment="Top" Height="46" Click="Refresh_Click" FontSize="20" Background="#FF48A325" Foreground="White"/>
+        <Label Content="Products" HorizontalAlignment="Left" Margin="420,28,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="36" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Custom Queries" HorizontalAlignment="Left" Margin="107,241,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Show average price per category:" HorizontalAlignment="Left" Margin="57,295,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
     </Grid>
 </Window>

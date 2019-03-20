@@ -151,6 +151,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_Dot_Net_IIS", "ASP_Dot_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_IIS", "ASP_IIS\ASP_IIS.csproj", "{C39D0913-DA96-477F-88F9-E5CDF9ACEF20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_Controllers", "ASP_Controllers\ASP_Controllers.csproj", "{EE5FBF4F-C35F-47FA-B78A-68D7BB07BC65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_asp", "test_asp\test_asp.csproj", "{7853BDF0-8BAB-4EC9-89A5-1C4C5CC1B0CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -453,6 +457,14 @@ Global
 		{C39D0913-DA96-477F-88F9-E5CDF9ACEF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C39D0913-DA96-477F-88F9-E5CDF9ACEF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C39D0913-DA96-477F-88F9-E5CDF9ACEF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5FBF4F-C35F-47FA-B78A-68D7BB07BC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5FBF4F-C35F-47FA-B78A-68D7BB07BC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5FBF4F-C35F-47FA-B78A-68D7BB07BC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5FBF4F-C35F-47FA-B78A-68D7BB07BC65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7853BDF0-8BAB-4EC9-89A5-1C4C5CC1B0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7853BDF0-8BAB-4EC9-89A5-1C4C5CC1B0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7853BDF0-8BAB-4EC9-89A5-1C4C5CC1B0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7853BDF0-8BAB-4EC9-89A5-1C4C5CC1B0CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
