@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace lab_123_crud_05.Pages
 {
+    
     public class OrderPageModel : PageModel
     {
 
@@ -16,30 +17,30 @@ namespace lab_123_crud_05.Pages
         //public IList<Product> Products { get; set; }
 
         List<Product> products = new List<Product>();
+        List<Order> orders = new List<Order>();
 
         private readonly lab_123_crud_05.Models.StoreDatabase _context;
 
-        public OrderPageModel(lab_123_crud_05.Models.StoreDatabase context)
+        public OrderPageModel(StoreDatabase injectedContext)
         {
-            _context = context;
+            db = injectedContext;
         }
+
+        
 
         [BindProperty]
         public Product Product { get; set; }
 
         [BindProperty]
-        public Order Order { get; set; }
+        public Order order { get; set; }
 
         [BindProperty]
         public OrderDetail Odetails { get; set; }
 
 
-
-
         public async Task<IActionResult> OnGetAsync(int id)
         {
-
-            Product = await _context.Products.FirstOrDefaultAsync(m => m.ProductID == id);
+            Product = await db.Products.FirstOrDefaultAsync(m => m.ProductID == id);
 
             if (Product == null)
             {
@@ -48,36 +49,50 @@ namespace lab_123_crud_05.Pages
             return Page();
         }
 
-        public IActionResult OnPost()
-        {
-            
-            products.Add(Product);
-
-            foreach (var p in products)
-            {
-                
-                OrderDetail od = new OrderDetail(p.ProductID);
-                db.OrderDetails.Add(od);
-            }
-            return Page();
-        }
-
-
 
         //public IActionResult OnPost()
         //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            db.Orders.Add(Products);
-        //            db.SaveChanges();
-        //            return RedirectToPage("/Products");
-        //        }
-        //        catch (Exception) { }
+        //    // Order o = new Order();
 
+        //    products.Add(Product);
+        //    //orders.Add(Order);
+
+        //    foreach (var p in products)
+        //    {
+        //        foreach (var o in orders)
+        //        {
+        //            OrderDetail od = new OrderDetail(p.ProductID, o.OrderID);
+        //            db.OrderDetails.Add(od);
+        //            db.SaveChanges();
+        //        }
+
+        //        //OrderDetail od = new OrderDetail(p.ProductID, o.OrderID);
+        //        //db.OrderDetails.Add(od);
         //    }
         //    return Page();
         //}
+
+
+
+        public IActionResult OnPost(Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                products.Add(product);
+                foreach (var p in products)
+                {
+                    var productToUpdate = db.Products.Where(prod => prod.ProductID == p.ProductID).FirstOrDefault();
+                    productToUpdate.Stock += 1;
+                    
+                    Order o = new Order(DateTime.Now,p.Price, p.ProductID);
+                    db.Orders.Add(o);
+                    db.SaveChanges();
+
+                }
+            }
+
+            return Page();
+        }
+
     }
 }

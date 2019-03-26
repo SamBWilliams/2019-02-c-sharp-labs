@@ -1,0 +1,45 @@
+﻿@page
+@model lab_123_crud_05.Pages.OrdersModel
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h2>Orders</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].OrderID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].OrderDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in Model.orders)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => o.OrderID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => o.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => o.Total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => o.OrderDate)
+                </td>
+            </tr>
+        }
+
