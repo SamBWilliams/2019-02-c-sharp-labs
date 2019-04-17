@@ -1,0 +1,82 @@
+﻿@page
+@model lab_35_asp_core_entity_web.Pages.CustomersModel
+@{
+    ViewData["Title"] = "Customers";
+    
+}
+<style>
+    .container{
+        background : rgb(128, 128, 128)
+    }
+    div.col-sm-3{
+        background:rgb(0, 148, 255);
+        padding: 3vh 2vw;
+        margin: 2vh 0;
+        
+    }
+</style>
+
+<div class="container">
+
+    <h2>@ViewData["Title"]</h2>
+
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="https://sparaglobal.com">
+                Sparta
+
+            </a>
+            <img src="https://www.fillmurray.com/200/300" width="40vw"/>
+
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li>Page1</li>
+            <li>Page2</li>
+            <li class="active">Page3</li>
+            <li>Page4</li>
+        </ul>
+    </nav>
+</div>
+
+<!--Add customer-->
+<div class="row">
+    <h6>Add a new customer</h6>
+    <form method="post">
+        <div><input asp-for="customer.CustomerID"/></div>
+        <div><input asp-for="customer.ContactName"/></div>
+        <div><input asp-for="customer.Country"/></div>
+        <input type="submit"/>
+    </form>
+</div>
+@foreach (var c in Model.customers)
+{
+    <div class="row">
+        <div class="col-sm-3">
+            @c.CustomerID
+        </div>
+        <div class="col-sm-3">
+            @c.ContactName
+        </div>
+        <div class="col-sm-3">
+            @c.Country
+        </div>
+        <div class="col-sm-3">
+            @c.City
+        </div>
+    </div>
+}
+
+<h2>Customers</h2>
+
+
+
+@*<ul>
+    @foreach(lab_35_asp_core_entity_web.Models.Customer c in Model.customers)
+    {
+        <li>@c.CustomerID---------@c.ContactName</li>
+        
+    }
+</ul>*@
+
+
